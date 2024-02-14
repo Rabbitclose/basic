@@ -12,11 +12,28 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+    public function actionIndex() {
+    return $this->render('index');
+}
+public function actionHelloWorld() {
+    return 'Hello World';
+}
+//     public $enableCsrfValidation = false;
+
+// public function actionIndex()
+// {
+//     $res = Yii::$app->telegram->sendMessage([
+//         'chat_id' => $chat_id,
+//         'text' => 'hello world!!' 
+//     ]);
+   
+// }
     /**
      * {@inheritdoc}
      */
     public function behaviors()
     {
+        
         return [
             'access' => [
                 'class' => AccessControl::class,
