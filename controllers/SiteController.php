@@ -12,12 +12,8 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
-    public function actionIndex() {
-    return $this->render('index');
-}
-public function actionHelloWorld() {
-    return 'Hello World';
-}
+
+
 //     public $enableCsrfValidation = false;
 
 // public function actionIndex()
@@ -80,7 +76,9 @@ public function actionHelloWorld() {
     {
         return $this->render('index');
     }
-
+    public function actionHelloWorld() {
+        return 'Hello World';
+    }
     /**
      * Login action.
      *
