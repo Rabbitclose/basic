@@ -12,5 +12,15 @@ class TelegramController extends Controller{
                 'chat_id' => $chat_id,
                 'text' => 'hello world!!' 
                 ]);
-}
+                }
+                public function actionSendMessage($idTelegram,$message){
+                    Telegram::sendMessage((int)$idTelegram,$message);
+                    }
+                    public function actionGetAllMesages(){
+                        $listMessages = Telegram::getMessages();
+                         return $this->render('contact', [
+                                'listMessages'=> $listMessages
+                            ]);
+                        }
+
 }
