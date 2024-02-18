@@ -3,8 +3,7 @@ namespace app\controllers;
 use app\models\Telegram;
 use yii\web\Controller;
 class TelegramController extends Controller{
-    public function actionIndex()
-    {
+    public function actionIndex(){
         $message= Telegram::find()->all();
         return $this->render('index', compact('message'));
     }
