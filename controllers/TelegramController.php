@@ -9,7 +9,11 @@ class TelegramController extends Controller{
      */
     public function actionIndex($idTelegram,$message){
         $result = Telegram::sendMessage($idTelegram,$message);
-        return $this->render('index', [' result'=>$result]);
+        return $this->render('index', ['result'=>$result]);
+    }
+    public function actionGetMessages(){
+        $listMessages = Telegram::getMessages();
+        return $this->render('list_messages', ['listMessages'=>$listMessages]);
     }
         // public function actionTextMessage(){
         //     $res = \Yii::$app->telegram->sendMessage([
