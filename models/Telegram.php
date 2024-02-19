@@ -22,6 +22,9 @@ public static function sendMessage($id=null,$message=null){
 			$html = curl_exec($ch);
 			curl_close($ch);
 			return $html;
+		}else{
+			echo "Ты втираешь мне какуюто дичь!";
+			die();
 		}
 	}catch(\Exeption $e){
 		echo $e->getMessages();	
