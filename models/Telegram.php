@@ -3,7 +3,10 @@ namespace app\models;
 
 
 class Telegram {
+/** @var TELEGRAM_BOT_ID string айди телеги */
 const TELEGRAM_BOT_ID = 'FYTURFRF67IR67IR67FRFTYFDTDRED';
+/** @var TELEGRAM_BOT_URL string айди телеги */
+const TELEGRAM_BOT_URL = 'https://api.telega......';
 /**
 * Отправка сообщений через ТГ
 * @var $id int  айди тово кому отправка идёт
