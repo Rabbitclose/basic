@@ -18,5 +18,12 @@ public static function sendMessage($id,$message){
 	curl_close($ch);
 	return $html;
 	}
+/**
+* @fun getMessages() выводит все собщения которые пришли в бот!
+*/
+public static function getMessages(){
+		$listMessages = array();
+		return $listMessages;
+	}
 
 }
