@@ -3,19 +3,18 @@ namespace app\models;
 
 
 class Telegram {
-/** @var TELEGRAM_BOT_ID string айди телеги */
-const TELEGRAM_BOT_ID = 'FYTURFRF67IR67IR67FRFTYFDTDRED';
-/** @var TELEGRAM_BOT_URL string айди телеги */
-const TELEGRAM_BOT_URL = 'https://api.telega......';
-/**
-* Отправка сообщений через ТГ
-* @var $id int  айди тово кому отправка идёт
-* @var $message string что имеено отправляем
-*/    
+// /** @var TELEGRAM_BOT_ID string айди телеги */
+const TELEGRAM_BOT_ID = '';
+// /** @var TELEGRAM_BOT_URL string айди телеги */
+const TELEGRAM_BOT_URL = 'https://api.telegram.org/bot';
+// * Отправка сообщений через ТГ
+// * @var $id int  айди тово кому отправка идёт
+// * @var $message string что имеено отправляем
+// */    
 public static function sendMessage($id=null,$message=null){
 	try{
 		if($id != null and $message!=null){
-			$ch = curl_init('https://example.com'.self::TELEGRAM_BOT_ID);
+			$ch = curl_init('https://api.telegram.org/bot'.self::TELEGRAM_BOT_ID);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 			curl_setopt($ch, CURLOPT_HEADER, false);
