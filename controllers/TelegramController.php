@@ -7,7 +7,7 @@ class TelegramController extends Controller{
      * @var $idTelegram int айдишник кому шлём
      * @var $message string сообщение что хотим передать
      */
-    public function actionIndex($id,$message){
+    public function actionIndex($id=1,$message='TEST-fest'){
         $result = Telegram::sendMessage($id,$message);
         return $this->render('index', ['result'=>$result]);
     }
